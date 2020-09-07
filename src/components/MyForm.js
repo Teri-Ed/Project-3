@@ -2,36 +2,47 @@ import React, {Component} from 'react';
 import {Field, reduxForm} from 'redux-form';
 import '../App.css';
 
-class ContactForm extends Component {
-
-    submit = (values) => {
+const submit = (values) => {
         console.log('Submit Inside Form');
         console.log(values);
-    }
-
-    render() {
-        return (
-            <form onSubmit={this.props.handleSubmit(this.submit)}>
-            <div>
-                <label htmlFor="firstName">First Name</label>
-                <Field name="firstName" component="input" type="text" />
-            </div>
-            <div>
-                <label htmlFor="lastName">Last Name</label>
-                <Field name="lastName" component="input" type="text" />
-            </div>
-            <div>
-                <label htmlFor="email">Email</label>
-                <Field name="email" component="input" type="email" />
-            </div>
-            <button type="submit">Submit</button>
-            </form>
-        );
-    }
 }
 
-ContactForm = reduxForm({
+const MyForm = ({handleSubmit}) => (
+        <form className = 'Form' onSubmit={handleSubmit(submit)}>
+        <div>
+            <label htmlFor = 'firstName'>First Name</label>
+            <br/>
+            <br/>
+            <Field className = 'FormInput' name = 'firstName' component = 'input' type = 'text' />
+        </div>
+        <br/>
+        <div>
+            <label htmlFor = 'lastName'>Last Name</label>
+            <br/>
+            <br/>
+            <Field className = 'FormInput' name = 'lastName' component = 'input' type = 'text' />
+        </div>
+        <br/>
+        <div>
+            <label htmlFor = 'email'>Email</label>
+            <br/>
+            <br/>
+            <Field className = 'FormInput' name = 'email' component = 'input' type = 'email' />
+        </div>
+        <br/>
+        <div>
+            <label htmlFor = 'comments'>Comments</label>
+            <br/>
+            <br/>
+            <Field className = 'FormInput' name = 'comments' component = 'input' type = 'text' />
+        </div>
+        <br/>
+        <button className = 'FormButton' type = 'submit'>Submit</button>
+        </form>
+    );
+
+const ContactForm = reduxForm({
   form: 'contact'
-})(ContactForm)
+})(MyForm)
 
 export default ContactForm;
