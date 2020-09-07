@@ -20,8 +20,8 @@ const AddTodo = ({dispatch}) => {
                     input.value = "";
                 }
             }>
-                <input type = "text" ref = {el => (input = el)}/>
-                <button type = "submit">Add Todo</button>
+                <input className = 'TodoInput' type = 'text' ref = {el => (input = el)} />
+                <button className = 'TodoButton' type = 'submit'>Add Todo</button>
             </form>
         </div>
     );
