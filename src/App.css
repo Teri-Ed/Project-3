@@ -1,38 +1,121 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 15vh;
+  background: #757F9A;
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-Links Link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.Home {
+  color: #3b3f4d;
+}
+
+.Todo {
+  background: #ED4264;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 500px;
+  width: 400px;
+  margin: 40px auto;
+}
+
+.TodoInput {
+  background-color: #ffffff;
+  border: 0;
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.TodoInput:focus {
+  outline: none;
+}
+
+.TodoButton {
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #77a18e; 
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.ListItem {
+  color: #3b3f4d;
+  width: 300px;
+  background-color: #D7DDE8;
+  height: 25px;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+
+.Faicons {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.Form {
+  background: #ED4264;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 500px;
+  width: 400px;
+  margin: 40px auto;
+}
+
+.FormButton {
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #77a18e; 
+  cursor: pointer;
+  color: #ffffff;
+}
+
+
+.FormInput {
+  background-color: #ffffff;
+  border: 0;
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.FormInput::placeholder {
+  color: orange;
+}
+
+.FormInput:focus {
+  outline: none;
 }
